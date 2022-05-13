@@ -9,9 +9,7 @@ getIntList = readIntList <$> BS.getLine
 
 main = do
     [n,_] <- getIntList
-    a_s <- getIntList
-    print $ solve n a_s
+    getIntList >>= print . solve n
 
 solve :: Integer -> [Integer] -> Integer
-solve n a_s = if 0 > ans n a_s then -1 else ans n a_s
-    where ans n' as'= n - sum as'
+solve n a_s = if 0 > n - sum a_s then -1 else n - sum a_s
