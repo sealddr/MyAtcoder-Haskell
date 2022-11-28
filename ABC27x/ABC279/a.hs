@@ -1,2 +1,4 @@
-main = getLine >>= print . solve
-solve str = length $ str ++ filter (=='w') str
+main = getLine >>= print . sum . map f
+f 'w' = 2
+f 'v' = 1
+f _ = 0
