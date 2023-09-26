@@ -1,2 +1,1 @@
-main = print . solve =<< readLn
-solve n = n * (n+1) `div` 2
+main = readLn >>= \n -> print $ n * (n + 1) `div` 2
